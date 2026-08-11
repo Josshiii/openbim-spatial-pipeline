@@ -41,7 +41,7 @@ Ensure Python 3.10+ is installed in your environment. Install required open-sour
 pip install ifcopenshell pandas openpyxl
 ```
 
-2. DeploymentClone the repository and insert your target IFC asset into the root directory:Bashgit clone [https://github.com/Josshiii/BIM_Data_Pipeline.git](https://github.com/Josshiii/BIM_Data_Pipeline.git)
+2. DeploymentClone the repository and insert your target IFC asset into the root directory:Bashgit clone https://github.com/Josshiii/openbim-spatial-pipeline
 cd BIM_Data_Pipeline
 
 3. ExecutionRun the extractor against your target asset (modelo_prueba.ifc by default):Bashpython extractor.py
