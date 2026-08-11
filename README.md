@@ -39,3 +39,10 @@ Ensure Python 3.10+ is installed in your environment. Install required open-sour
 
 ```bash
 pip install ifcopenshell pandas openpyxl
+```
+
+2. DeploymentClone the repository and insert your target IFC asset into the root directory:Bashgit clone [https://github.com/Josshiii/BIM_Data_Pipeline.git](https://github.com/Josshiii/BIM_Data_Pipeline.git)
+cd BIM_Data_Pipeline
+
+3. ExecutionRun the extractor against your target asset (modelo_prueba.ifc by default):Bashpython extractor.py
+Structured Output Schema (bim_telemetry_matrix.json / .csv)The pipeline compiles an auditable table containing the following normalized fields per IFC instance:FieldData TypeDescriptionGlobalIdStringUniversal 22-character IFC unique identifier.IFC_ClassStringPrimary OpenBIM data schema type (e.g., IfcBeam, IfcSlab).Normalized_NameStringSanitized, uppercase alphanumeric identifier for database indexing.Raw_NameStringOriginal text string extracted from the authoring software.Object_TypeStringStructural/Architectural family or category designator.Assigned_MaterialsStringPipe-delimited list of physical materials or textures bound to the element.Property_Set_CountIntegerQuantitative sum of attached IfcPropertySet containers.Has_GeometryBooleanBoolean flag confirming physical 3D mesh representation.Professional ContextThis pipeline represents a core architectural module used in automated Virtual Design and Construction (VDC) data validation workflows, bridging the gap between computational systems engineering and spatial project execution.Author: Alberto Alvarez Gonzalez — Systems VDC Architect & BIM Coordinator
